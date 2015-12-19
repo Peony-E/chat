@@ -21,7 +21,7 @@ var express = require('express'),//引入express模块
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server),
 	users = [];
-app.use('/',express.static(__dirname+'/'));//指定静态HTML文件的位置
+app.use('/',express.static(__dirname+'/www'));//指定静态HTML文件的位置
 server.listen(80);
 console.log('Server started')
 
