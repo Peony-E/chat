@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>chat</title>
 <script src="/socket.io/socket.io.js"></script>
-<link rel="stylesheet" href="www/styles/main.css">
+<link rel="stylesheet" href="styles/main.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -42,7 +42,15 @@
                 <input type="button" value="OK" id="loginBtn" />
             </div>
         </div>
-        <script src="www/scripts/chat.js"></script>
+        <script src="scripts/chat.js"></script>
 
+    <script>
+    var socket=io.connect(),
+        button=document.getElementById('sendBtn');
+    button.onclick=function(){
+        socket.emit('foo','hello');
+    }
+
+    </script>
 </body>
 </html>
